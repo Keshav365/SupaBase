@@ -1,0 +1,188 @@
+.mainCunt {
+    width: 100%;
+}
+
+.loginDiv * {
+    color: #111111;
+    background-color: #ffffff;
+}
+
+.loginDiv {
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Centering trick */
+    padding: 1rem 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(2, 88, 142, 0.5);
+    /* Adjust shadow as needed */
+    max-width: 400px;
+    width: 90%;
+    /* Adjust width as needed */
+    text-align: center;
+    z-index: 10;
+
+    transform: translateX(100%);
+    animation: slideIn .2s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        scale: .1%;
+        transform: translate(-50%, -50%);
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.sideAlert {
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    position: absolute;
+    bottom: 1vh;
+    right: -2vh;
+    transform: translateX(0);
+    opacity: 0;
+    animation: slideInFromRight 1s forwards;
+
+}
+
+.success{
+    background-color: green;
+}
+
+.sideAlert p {
+    float: right;
+    background-color: rgba(0,0,0,0);
+    margin-right: 2vh;
+}
+
+.closebtn {
+    background-color: rgba(0,0,0,0);
+    margin-right: 15px;
+    color: white;
+    font-weight: bold;
+    float: left;
+    font-size: xx-large;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%); /* Start from outside the right edge of the viewport */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* End at the original position */
+    }
+}
+
+.signUp>* {
+    background-color: #fff;
+}
+
+.signUp h1 {
+    padding: 0%;
+    margin: 0 auto;
+    height: 5rem;
+    width: 60%;
+    background-image: url(./supa.png);
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+}
+
+.logo-badge {
+    font-size: 4rem;
+}
+
+
+.text-darkyellow {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+.container-content {
+    margin-top: 1rem;
+}
+
+.form-group {
+    color: #111111;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 70%;
+    /* border: 2px solid black; */
+    /* border-radius: 7px; */
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.5rem;
+    /* border: none; */
+    border: 2px solid #949494;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: black;
+}
+
+.form-control::placeholder {
+    color: #111111;
+}
+
+.form-button {
+    display: inline-block;
+    width: 70%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background: #ffd814;
+    background-color: #fcd200;
+    /* color: #282c34; */
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 0 auto;
+}
+
+.form-button:hover {
+    background-color: #f7ca00;
+}
+
+.margin-t {
+    margin-top: 1rem;
+
+}
+
+h3 {
+
+
+    font-size: 40px;
+    margin: 0em 0 .5em 0;
+}
+
+.margin-b {
+    margin-bottom: 1rem;
+}
+
+.text-center {
+    text-align: center;
+}

@@ -1,0 +1,24 @@
+import React from 'react';
+import { useUserName } from '../hooks/useUserName';
+
+export default function UserProfile() {
+  const { userName, loading, error } = useUserName();
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
+  return (
+    <div>
+      {userName ? (
+        <h1>Welcome, {userName}!</h1>
+      ) : (
+        <h1>Username not set</h1>
+      )}
+    </div>
+  );
+}

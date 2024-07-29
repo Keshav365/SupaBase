@@ -1,0 +1,264 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.4%;
+    width: 100%;
+}
+
+header input::placeholder {
+    color: aliceblue;
+}
+
+input {
+    width: 60%;
+    color: aliceblue;
+    border: 3px solid #eee;
+    border-radius: 100px;
+    margin: .5% .7% 0 0;
+    padding: 15px 20px 15px 10px;
+}
+
+.rightHeader {
+    display: flex;
+    align-items: center;
+    width: 31%;
+    margin-right: 2%;
+    justify-content: start;
+}
+
+.rightHeader * {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.WelcomeMessage {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.6em;
+    background-color: rgba(52, 58, 64, .4);
+    border-radius: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-right: 2%;
+
+}
+
+.WelcomeMessage p {
+    overflow: hidden;
+    width: 60%
+}
+
+.supaLogoContainer {
+    border: 2px solid white;
+    position: absolute;
+    z-index: 2;
+    top: 12vh;
+    right: 3vw;
+    background-color: rgba(52, 58, 64, 0);
+    font-size: larger;
+    display: flex;
+    align-items: center;
+    width: 20vw;
+    overflow: hidden;
+    display: none;
+}
+
+.supaLogoContainer h1 {
+    font-size: 6vw;
+    color: #c6641b;
+}
+
+.supaLogoContainer h2 {
+    font-size: 4vw;
+}
+
+/* Front Icon */
+div.FrontIcon {
+    width: 30%;
+
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    background-color: rgba(52, 58, 64, 0);
+    font-size: 1.2em;
+}
+
+div.FrontIcon div {
+    background-color: rgba(52, 58, 64, .4);
+    border-radius: 50%;
+    margin-left: 5%;
+    /* margin-right: 4%; */
+}
+
+div.FrontIcon div:hover {
+    background-color: rgba(52, 58, 64, .8);
+}
+
+/* All Profile */
+.allProfile {
+    padding: .5vw;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+    position: absolute;
+    top: 5rem;
+    right: 2.5rem;
+    background-color: #1c1e24;
+    border-radius: 10px;
+    color: wheat;
+    opacity: 2%;
+}
+
+.allProfile * {
+    background-color: rgba(0, 0, 0, 0);
+
+}
+
+/* Additional Styles */
+.sonProfile {
+    padding: 2%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 2% auto;
+
+}
+
+.sonProfile h5 {
+    margin: 5% auto;
+    display: flex;
+    color: #02588e;
+}
+
+.sonProfile svg {
+    background-color: #4e4f50;
+}
+
+.logoutIcon {
+    border-radius: 50%;
+    border: solid white 2px;
+    cursor: pointer;
+}
+
+.logoutIcon:hover {
+    background-color: rgba(52, 58, 64, .8);
+
+}
+
+.allProfile .apItem {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 15vw;
+    margin: 4% auto;
+    color: wheat;
+}
+
+.allProfile .apItem p {
+    margin-left: 6%;
+    margin-right: 8%;
+    font-size: 17px;
+}
+
+.allProfile .apItem a {
+    text-decoration: none;
+    margin-left: 6%;
+    margin-right: 8%;
+    font-size: 17px;
+}
+
+.apItemIcon {
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #4e4f50;
+    margin-left: 5%;
+    color: wheat;
+}
+
+.apItemIcon svg {
+    /* background-color: wheat; */
+    color: wheat;
+}
+
+.allProfile .apItem:hover {
+    background-color: #75787c;
+}
+
+
+/* Animation */
+.ShowProfile {
+    display: flex;
+    animation: fadeInFromRight 0.2s ease forwards;
+    transform-origin: right top center;
+    opacity: 0;
+    transform: scale(0.5);
+    /* background: linear-gradient(0deg, #000, #272727); */
+
+    /* z-index: ; */
+}
+
+@keyframes fadeInFromRight {
+    0% {
+        opacity: .5;
+        transform: scale(0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.allProfileBg {
+    width: 7% ;
+    height: 15.8%;
+    padding: .5vw;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 12rem;
+    right: 7.3rem;
+    background-color: #1c1e24;
+    border-radius: 10px;
+    color: wheat;
+
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094,
+            #0000ff, #00ff00, #ffff00, #ff0000);
+    background-size: 400%;
+   
+    z-index: 3;
+    animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.allProfileBg {
+    filter: blur(6em);
+}
+
+.HideProfile {
+    display: none;
+}
+
+.ShowG {
+    display: flex;
+}
+
+.HideG {
+    display: none;
+}

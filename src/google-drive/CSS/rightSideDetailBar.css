@@ -1,0 +1,122 @@
+.rightSideDetailBar {
+  z-index: 2;
+  width: 23%;
+  background-color: rgba(28, 30, 36, 1);
+  padding: 2%;
+  max-height: 60vh;
+  border-radius: 10px;
+  box-shadow: 0 2px 25px rgba(2, 88, 142, 0.2);
+  margin-left: 2%;
+  position: absolute;
+  top: 0%;
+  right: -29%;
+  font-size: large;
+
+  /* Animation properties */
+  animation: fadeInFromRight 0.5s ease forwards;
+  transform-origin: right center; /* Scale from the right */
+
+  /* Hide initially */
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+@keyframes fadeInFromRight {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.allButHeading{
+  max-height: 56vh;
+  background-color: rgba(28, 30, 36,1);
+  border-top: dashed 5px rgba(2, 88, 142, 0.2);
+  height: 65vh;
+  font-size: large;
+  overflow-y: scroll;
+}
+
+/* Track */
+.allButHeading::-webkit-scrollbar {
+  width: 8px;
+}
+.allButHeading::-webkit-scrollbar-track {
+  background: #fff; 
+}
+ 
+/* Handle */
+.allButHeading::-webkit-scrollbar-thumb {
+  background: #010b14; 
+}
+
+.allButHeading::-webkit-scrollbar-thumb:hover {
+  background: #000; 
+}
+  
+.rightSideDetailBar h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    background-color: rgba(52, 58, 64,.0);
+    color: #ffffff;
+}
+
+.detailItem {
+  width: 100%;
+  background-color: rgba(52, 58, 64,.0);
+  display: block;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+  
+.detailItem span {
+  overflow:auto;
+  width: 95%;
+  display: block;
+  text-align:start;
+  background-color: rgba(52, 58, 64,.0);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Scrollbar */
+.detailItem span::-webkit-scrollbar {
+  height: 8px;
+}
+.detailItem span::-webkit-scrollbar-track {
+  background: #fff; 
+}
+ 
+/* Handle */
+.detailItem span::-webkit-scrollbar-thumb {
+  background: #010b14; 
+}
+
+.detailItem span::-webkit-scrollbar-thumb:hover {
+  background: #000; 
+}
+
+.detailItem span:first-child {
+  margin-bottom: 4px;
+  background-color: rgba(52, 58, 64,.0);
+  color: rgb(255, 255, 255);
+}
+
+.detailItem span:nth-child(2n) {
+  background-color: rgba(52, 58, 64,.0);
+  color: rgba(255, 255, 255, .6);
+}
+.show{
+  display: block;
+  
+
+}
+.hide{
+  display: none;
+  
+}

@@ -1,0 +1,97 @@
+
+.UploadDiv * {
+    color: #111111;
+    background-color: #ffffff;
+}
+
+.UploadDiv {
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%; /* Adjust top to 50% */
+    left: 50%; /* Adjust left to 50% */
+    transform: translate(-50%, -50%); /* Centering trick */
+    padding: .5rem 0 1rem 0;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
+
+.logo-badge {
+    font-size: 4rem;
+}
+
+
+.container-content {
+    margin-top: 1rem;
+}
+
+.form-group {
+    color: #111111;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 70%;
+    /* border: 2px solid black; */
+    /* border-radius: 7px; */
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.5rem;
+    /* border: none; */
+    border: 2px dashed #949494;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: black;
+}
+
+.form-control::placeholder {
+    color: #111111;
+}
+
+.form-group svg{
+font-size: 50px;
+}
+
+.form-button {
+    display: inline-block;
+    width: 70%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background: #02588e;
+    background-color: #02588e;
+    /* color: #282c34; */
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 0 auto;
+    color: #ffffff;
+}
+
+.form-button:hover {
+    background-color: #01385b;
+}
+
+.margin-t {
+    margin-top: 1rem;
+
+}
+
+h3{
+
+
+    font-size: 40px;
+}
+
+.margin-b {
+    margin-bottom: 1rem;
+}
+
+.text-center {
+    text-align: center;
+}
