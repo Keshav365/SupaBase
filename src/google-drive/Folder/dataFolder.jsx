@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import '../CSS/rightSideDetailBar.css';
 import FolderFav from './Folder.jsx';
 import FolderBar from './FolderBar.jsx';
 

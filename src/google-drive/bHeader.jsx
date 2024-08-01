@@ -1,6 +1,5 @@
 // bHeader.jsx
 import React, { useEffect } from 'react';
-import './CSS/bHeader.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBullseye, faFilePdf, faFile, faVideo, faFileAudio, faImage } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';

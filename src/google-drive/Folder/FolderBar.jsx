@@ -1,5 +1,5 @@
 import React from 'react';
-import '../CSS/rightSideDetailBar.css';
+// import '../CSS/rightSideDetailBar.css';
 
 
 

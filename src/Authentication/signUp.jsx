@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import { Form, Button, Card, Alert } from "react-bootstrap";
 import { useAuth } from "../contexts/AuthContext";
 import { Link, useNavigate } from "react-router-dom";  // Note useNavigate instead of useHistory
-import '../CSS/card.css';
 
 export default function Signup() {
     const emailRef = useRef();
@@ -49,7 +48,6 @@ export default function Signup() {
             <div className='signUp'>
                 <h1 className="logo-badge text-whitesmoke"></h1>
                 <h3 className="text-whitesmoke">Sign Up</h3>
-                {error && <Alert variant="danger">{error}</Alert>}
             </div>
             <div className="container-content">
                 <form className="margin-t" onSubmit={handleSubmit}>

@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react"
 import { Form, Button, Card, Alert } from "react-bootstrap"
 import { useAuth } from "../contexts/AuthContext"
 import { Link } from "react-router-dom"
-import '../CSS/card.css'
+// import '../CSS/card.css'
 
 export default function UpdateProfile() {
   const emailRef = useRef()
@@ -32,7 +32,7 @@ export default function UpdateProfile() {
 
     Promise.all(promises)
       .then(() => {
-        history.push("/user")
+        history.push("/")
       })
       .catch(() => {
         setError("Password changed successfully")
@@ -75,7 +75,7 @@ export default function UpdateProfile() {
               </Button>
             </div>
             <div className="w-100 text-center mt-2">
-              <Link to="/user">Cancel</Link>
+              <Link to="/">Cancel</Link>
             </div>
           </Form>
           <p className="margin-t text-whitesmoke"><small>SupaDrive &copy; 2024,</small></p>

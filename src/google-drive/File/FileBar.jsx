@@ -1,5 +1,4 @@
 import React from 'react';
-import '../CSS/rightSideDetailBar.css';
 
 function FileBar({ name, type, url, size, modified }) {
   return (

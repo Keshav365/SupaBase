@@ -4,7 +4,7 @@ import { useAuth } from "../contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { db, serverTimestamp, database } from "../firebase";
 import { collection, query, where, getDocs } from "firebase/firestore";
-import '../CSS/card.css';
+// import '../CSS/card.css';
 
 export default function UserName() {
     const { currentUser } = useAuth();

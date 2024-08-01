@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import '../CSS/mainBody.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashRestore, faTrash, faStar as faStarRegular } from '@fortawesome/free-solid-svg-icons';
 import { faStar as faStarLight } from '@fortawesome/free-regular-svg-icons'; // Light icon

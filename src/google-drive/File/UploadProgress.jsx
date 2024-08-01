@@ -1,5 +1,4 @@
 import React from 'react';
-import '../CSS/uploadProgress.css';
 
 function UploadProgress({ progress }) {
     return (

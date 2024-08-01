@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
-import supaLogo from './CSS/supa.png'
 import '@fortawesome/react-fontawesome'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSignOut, faSun, faUser, faHand, faHandHoldingHeart, faRefresh, faExchange, faSocks } from '@fortawesome/free-solid-svg-icons'
 import Profile from '../Authentication/Profile.jsx'
 import { Link, useNavigate } from "react-router-dom"
+import { useUserName } from '../hooks/useUserName';
+
 
 
 export default function PProfile({ email }) {
+  const { userName, loading, error: userNameError } = useUserName();
   const [isProfileVisible, setIsProfileVisible] = useState(true);
 
   const toggleProfileVisibility = () => {
@@ -18,9 +20,6 @@ export default function PProfile({ email }) {
     <>
       <div className="rightHeader">
         <Profile></Profile>
-        <div className="supaLogoContainer">
-          <h2>Supa</h2><h1>DRIVE</h1>
-        </div>
         <div className='FrontIcon'>
           <div className="aCenter">
             <FontAwesomeIcon icon={faSun}></FontAwesomeIcon>
@@ -29,13 +28,12 @@ export default function PProfile({ email }) {
             <FontAwesomeIcon icon={faUser}></FontAwesomeIcon>
           </div>
         </div>
-
       </div >
       <div className={`allProfileBg ${isProfileVisible ? 'HideG' : 'ShowG'}`} ></div>
       <div className={`allProfile ${isProfileVisible ? 'HideProfile' : 'ShowProfile'}`} >
         <div className='sonProfile'>
           <FontAwesomeIcon icon={faUser} />
-          <h4>Shivam Goyal</h4>
+          <h4>{userNameError ? `Error: ${userNameError}` : `${userName}`}</h4>
           <h5><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">{email}</a></h5>
         </div>
         <div className="apItem">
@@ -61,13 +59,13 @@ export default function PProfile({ email }) {
           <div className="apItemIcon">
             <FontAwesomeIcon icon={faSocks} />
           </div>
-          <a href="">Github Link</a>
+          <a href="https://github.com/Keshav365/">My Github</a>
         </div>
         <div className="apItem">
           <div className="apItemIcon">
             <FontAwesomeIcon icon={faHand} />
           </div>
-          <a href="">Github Link</a>
+          <a href="https://github.com/Keshav365/SupaBase">Github Link</a>
         </div>
       </div >
     </>

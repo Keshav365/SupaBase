@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import "./CSS/bHeader.css";
-import './CSS/header.css';
 import DataFolder from "./Folder/dataFolder.jsx";
 import DataFile from "./File/dataFile.jsx";
 import VButton from "./bHeader";
@@ -48,6 +46,7 @@ export default function Dashboard() {
       <div className="appContainer">
         <Sidebar folder={folder} childFolders={childFolders} user={currentUser} min="6" max="15" />
         <div className="mainContent">
+
           <header>
             <input
               type="text"
@@ -57,7 +56,9 @@ export default function Dashboard() {
             />
             <PProfile email={currentUser.email} />
           </header>
+
           <VButton onFilterChange={handleFilterChange} />
+
           <div className="cBaby">
             <PathToRoot currentFolder={folder} />
             <hr />
@@ -74,6 +75,7 @@ export default function Dashboard() {
             </div>
 
           </div>
+
         </div>
       </div>
     </div>

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import '../CSS/sidebar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFolder, faStar, faTrash, faCloud } from '@fortawesome/free-solid-svg-icons';
 import FolderUploadForm from '../Folder/uploadFolder';

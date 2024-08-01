@@ -1,5 +1,4 @@
 import { useState, useRef } from 'react';
-import '../CSS/uploadFile.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileUpload, faFolderPlus } from '@fortawesome/free-solid-svg-icons';
 import { Modal } from '@material-ui/core';

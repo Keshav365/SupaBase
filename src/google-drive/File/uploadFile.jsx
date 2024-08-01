@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import '../CSS/uploadFile.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileUpload } from '@fortawesome/free-solid-svg-icons';
 import { Modal } from '@material-ui/core';
 import { auth, database, storage, ref, uploadBytesResumable, getDownloadURL, serverTimestamp } from '../../firebase.js';
 import { onAuthStateChanged } from 'firebase/auth';
-import UploadingPara from './uploading.jsx';
+// import UploadingPara from './uploading.jsx';
 import UploadProgress from './UploadProgress.jsx';
 import { ROOT_FOLDER } from '../../hooks/useFolder.js';
 
@@ -19,7 +18,14 @@ function FileUploadForm({ currentFolder, updateStorageUsed }) {
     const [uploadProgress, setUploadProgress] = useState({});
     const [uploading, setUploading] = useState(false);
     const [error, setError] = useState('');
-
+    const UploadForm = (handleUpload, handleFileChange, closeModal) => {
+        const handleKeyDown = (event) => {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                document.getElementById('uploadButton').click();
+            }
+        }
+    };
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
@@ -140,7 +146,6 @@ function FileUploadForm({ currentFolder, updateStorageUsed }) {
     const closeModal = () => {
         setOpen(false);
     };
-
     return (
         <>
             <div className="uploadButton">
@@ -149,31 +154,27 @@ function FileUploadForm({ currentFolder, updateStorageUsed }) {
                 </button>
             </div>
             <Modal open={open} onClose={closeModal}>
-                {uploading ? (
-                    <UploadingPara progress={uploadProgress} />
-                ) : (
-                    <div className="UploadDiv">
-                        <div className="container-content">
-                            <form className="margin-t" onSubmit={handleUpload}>
-                                <div className="form-group">
-                                    <FontAwesomeIcon icon={faFileUpload} />
-                                    <input
-                                        type="file"
-                                        className="form-control"
-                                        id="fileInput"
-                                        multiple
-                                        required
-                                        onChange={handleFileChange}
-                                    />
-                                </div>
-                                <div>
-                                    <button type="submit" className="form-button button-l margin-b">Upload</button>
-                                    <button type="button" onClick={closeModal} className="form-button button-l margin-b">Close</button>
-                                </div>
-                            </form>
+
+                <div className="UploadDiv">
+                    <form className="margin-t" onSubmit={handleUpload}>
+                        <div className="form-group">
+                            <FontAwesomeIcon icon={faFileUpload} />
+                            <input
+                                type="file"
+                                className="form-control"
+                                id="fileInput"
+                                multiple
+                                required
+                                onChange={handleFileChange}
+                            />
                         </div>
-                    </div>
-                )}
+                        <div>
+                            <button type="submit" className="form-button button-l margin-b">Upload</button>
+                            <button type="button" onClick={closeModal} className="form-button button-l margin-b">Close</button>
+                        </div>
+                    </form>
+                </div>
+
             </Modal>
             <UploadProgress progress={uploadProgress} />
         </>

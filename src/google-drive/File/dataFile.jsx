@@ -105,7 +105,7 @@ const DataFile = ({ activeFileType, childFiles, user, searchTerm }) => {
   };
 
   return (
-    <div className='f1'>
+    <div className='f1 files'>
       {childFiles.length > 0 && (
         <div className='d-flex flex-wrap'>
           {childFiles
